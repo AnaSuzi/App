@@ -1,0 +1,128 @@
+body {
+  background-color: rgb(243, 243, 235);
+  margin-left: 30px;
+}
+h1 {
+  display: block;
+  width: 100%;
+  margin: 0;
+  font-size: 40px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+}
+h2 {
+  display: block;
+  padding: 20px 0;
+  font-size: 15px;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  font-family: "Montserrat", sans-serif;
+  color: gray;
+  margin-top: 0;
+  align-items: end;
+}
+
+h3 {
+  font-size: 90px;
+  font-weight: lighter;
+  font-family: "Montserrat", sans-serif;
+}
+
+#text {
+  border: 1px solid gray;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  margin: 60px 10px 0 30px;
+  padding: 5px 5px;
+  width: 300px;
+}
+
+.look {
+  font-family: "Montserrat", sans-serif;
+  border-radius: 4px;
+  border: 1px solid gray;
+  background-color: rgb(243, 243, 235);
+  color: gray;
+}
+.look:hover {
+  background-color: white;
+}
+.temp {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  margin: 0 10px;
+  letter-spacing: 8px;
+}
+
+.card {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 15px;
+
+  background: rgb(243, 243, 235);
+}
+
+.place {
+  color: #c1a3a3;
+}
+.dot {
+  background: #c1a3a3;
+  width: 60px;
+
+  border: 0;
+}
+.line {
+  background: #c1a3a3;
+  width: 1010px;
+
+  border: 0;
+}
+.card-text {
+  font-size: 60px;
+  color: #dab88b;
+}
+
+.rainy {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 15px;
+  font-weight: lighter;
+  letter-spacing: 5px;
+}
+
+.sunny {
+  font-size: 200px;
+  color: #dab88b;
+}
+.card-title {
+  color: #c1a3a3;
+  font-weight: 400;
+}
+
+.first {
+  padding-top: 40px;
+}
+
+#celsius {
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: lighter;
+  font-family: "Montserrat", sans-serif;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  border-radius: 4px;
+  border: 1px solid gray;
+  background-color: rgb(243, 243, 235);
+  color: gray;
+  margin: 0 auto;
+  padding: 1px 6px;
+}
+
+button:hover {
+  background-color: white;
+}
