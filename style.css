@@ -119,6 +119,10 @@ h3 {
   font-size: 20px;
   color: #c1a3a3;
 }
+.my-name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
 button {
   font-family: "Montserrat", sans-serif;
   border-radius: 4px;
