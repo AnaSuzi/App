@@ -136,3 +136,11 @@ button {
 button:hover {
   background-color: white;
 }
+
+#des {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+  color: gray;
+  font-weight: lighter;
+}
