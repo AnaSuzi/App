@@ -62,6 +62,10 @@ function showWeather(response) {
   let max = Math.round(response.data.main.temp_max);
   let maxElement = document.querySelector("#max-temp");
   maxElement.innerHTML = `${max}`;
+  // description
+  let description = response.data.weather[0].description;
+  let descriptionElement = document.querySelector("descrip");
+  descriptionElement.innerHTML = `${description}`;
 }
 
 function showPosition(position) {
