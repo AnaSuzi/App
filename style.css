@@ -6,7 +6,7 @@ h1 {
   display: block;
   width: 100%;
   margin: 0;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: lighter;
   letter-spacing: 2px;
   font-family: "Montserrat", sans-serif;
@@ -24,7 +24,7 @@ h2 {
 }
 
 h3 {
-  font-size: 90px;
+  font-size: 60px;
   font-weight: lighter;
   font-family: "Montserrat", sans-serif;
 }
@@ -76,7 +76,7 @@ h3 {
 }
 .line {
   background: #c1a3a3;
-  width: 1010px;
+  width: 680px;
 
   border: 0;
 }
@@ -94,7 +94,7 @@ h3 {
 }
 
 .sunny {
-  font-size: 200px;
+  font-size: 100px;
   color: #dab88b;
 }
 .card-title {
@@ -142,7 +142,11 @@ button:hover {
   font-family: "Montserrat", sans-serif;
   list-style: none;
   color: gray;
-
+  font-weight: lighter;
   font-size: 15px;
   letter-spacing: 5px;
+}
+
+.app-wrapper {
+  max-width: 800px;
 }
