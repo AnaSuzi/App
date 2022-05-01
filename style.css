@@ -28,7 +28,7 @@ h3 {
   font-size: 60px;
   font-family: "Poppins", sans-serif;
   color: #d9d7f1;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 #temp-number {
@@ -111,6 +111,7 @@ input:focus {
   font-weight: normal;
   font-family: "Poppins", sans-serif;
   color: #d9d7f1;
+  cursor: default;
 }
 
 .link {

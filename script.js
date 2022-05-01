@@ -33,8 +33,9 @@ function showCity(cityName) {
 }
 
 function showWeather(response) {
+  celsiusTemperature = response.data.main.temp;
   //temp
-  let temperature = Math.round(response.data.main.temp);
+  let temperature = Math.round(celsiusTemperature);
   let temperatureElement = document.querySelector("#temp-number");
   temperatureElement.innerHTML = `${temperature}`;
   //city
@@ -95,11 +96,20 @@ button.addEventListener("click", getCurrentPosition);
 
 function showFarenheit(event) {
   event.preventDefault();
-  let farenTemp = (14 * 9) / 5 + 32;
-  alert(farenTemp);
+  let farenTemp = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temp-number");
+  temperatureElement.innerHTML = Math.round(farenTemp);
+}
+
+function showCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp-number");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 let farenheit = document.querySelector("#farenheit");
 farenheit.addEventListener("click", showFarenheit);
-
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", showCelsius);
+let celsiusTemperature = null;
 showCity("Ljubljana");
