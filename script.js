@@ -46,7 +46,7 @@ function showWeather(response) {
   let humidity = response.data.main.humidity;
   let humidityElement = document.querySelector("#humidity-number");
   humidityElement.innerHTML = `${humidity}`;
-  console.log(response);
+
   //wind
   let wind = response.data.wind.speed;
   let windElement = document.querySelector("#wind-number");
