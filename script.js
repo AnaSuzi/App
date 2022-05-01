@@ -93,4 +93,13 @@ function getCurrentPosition(event) {
 let button = document.querySelector("button");
 button.addEventListener("click", getCurrentPosition);
 
+function showFarenheit(event) {
+  event.preventDefault();
+  let farenTemp = (14 * 9) / 5 + 32;
+  alert(farenTemp);
+}
+
+let farenheit = document.querySelector("#farenheit");
+farenheit.addEventListener("click", showFarenheit);
+
 showCity("Ljubljana");
