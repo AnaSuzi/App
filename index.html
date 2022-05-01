@@ -21,6 +21,12 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,700;0,800;0,900;1,100;1,200&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/1cf900573f.js"
       crossorigin="anonymous"
@@ -32,7 +38,7 @@
       <div class="app-wrapper">
         <div class="row">
           <form action="" id="form-text" class="col-12 col-md-6">
-            <input id="text" placeholder="Look for a city" />
+            <input id="text" placeholder="look for a city" />
             <input type="submit" value="search" class="look" />
             <button>current location</button>
           </form>
@@ -45,125 +51,127 @@
                   </span>
                   <span class="cityNew" id="city-name">CITY</span>
                 </h1>
-
-                <h2 class="currentCity" id="current"></h2>
-
-                <div id="des"></div>
+                <h2>
+                  <div class="currentCity" id="current"></div>
+                  <br />
+                  <div id="des"></div>
+                  <br />
+                  <div class="temp">
+                    <strong> <span id="max-temp">16</span>°</strong>|<span
+                      id="min-temp"
+                      >5</span
+                    >°
+                  </div>
+                </h2>
               </div>
 
               <div class="col-12 col-sm-6">
                 <h3>
-                  <span id="temp-number"> </span>
+                  <span id="temp-number"> </span>°
                   <span class="unit">
-                    <a href="#" id="celsius"> °C </a>
+                    <a href="#" id="celsius"> C </a>
                   </span>
                 </h3>
-                <div class="temp">
-                  <strong> <span id="max-temp">16</span>°</strong>|<span
-                    id="min-temp"
-                    >5</span
-                  >°
-                </div>
+
                 <br />
                 <i class="fa-regular fa-sun sunny"></i>
               </div>
             </div>
             <br />
             <br />
-            <div class="row rainy">
+            <div class="row situation">
               <div class="col-3">
-                Pressure<br />
+                pressure<br />
                 <strong><span id="pressure-number">1021</span>hPa</strong>
               </div>
 
               <div class="col-3">
-                Wind <br /><strong><span id="wind-number">29</span>km/h</strong>
+                wind <br /><strong><span id="wind-number">29</span>km/h</strong>
               </div>
 
               <div class="col-3">
-                Humidity <br /><strong
+                humidity <br /><strong
                   ><span id="humidity-number">28</span>%</strong
                 >
               </div>
             </div>
-
-            <hr class="line" />
+            <br />
             <div class="row">
               <div class="col-2">
-                <div class="card" style="width: 8rem; height: 15rem">
+                <div class="card" style="width: 8rem; height: 8rem">
                   <div class="card-body">
-                    <h5 class="card-title">sun</h5>
+                    <h5 class="card-title">SUN</h5>
                     <div class="temp">
                       <strong> 11° </strong>
-                      <hr class="dot" />
+
                       2°
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-sign">
                       <i class="fa-solid fa-cloud-rain"></i>
                     </p>
                   </div>
                 </div>
               </div>
               <div class="col-sm-2">
-                <div class="card" style="width: 8rem; height: 15rem">
+                <div class="card" style="width: 8rem; height: 8rem">
                   <div class="card-body">
-                    <h5 class="card-title">mon</h5>
+                    <h5 class="card-title">MON</h5>
                     <div class="temp">
                       <strong> 17° </strong>
-                      <hr class="dot" />
+
                       -1°
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-sign">
                       <i class="fa-regular fa-sun"></i>
                     </p>
                   </div>
                 </div>
               </div>
               <div class="col-sm-2">
-                <div class="card" style="width: 8rem; height: 15rem">
+                <div class="card" style="width: 8rem; height: 8rem">
                   <div class="card-body">
-                    <h5 class="card-title">tue</h5>
+                    <h5 class="card-title">TUE</h5>
                     <div class="temp">
                       <strong> 18° </strong>
-                      <hr class="dot" />
+
                       4°
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-sign">
                       <i class="fa-regular fa-sun"></i>
                     </p>
                   </div>
                 </div>
               </div>
               <div class="col-sm-2">
-                <div class="card" style="width: 8rem; height: 15rem">
+                <div class="card" style="width: 8rem; height: 8rem">
                   <div class="card-body">
-                    <h5 class="card-title">wed</h5>
+                    <h5 class="card-title">WED</h5>
                     <div class="temp">
                       <strong> 18° </strong>
-                      <hr class="dot" />
+
                       3°
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-sign">
                       <i class="fa-regular fa-sun"></i>
                     </p>
                   </div>
                 </div>
               </div>
               <div class="col-sm-2">
-                <div class="card" style="width: 8rem; height: 15rem">
+                <div class="card" style="width: 8rem; height: 8rem">
                   <div class="card-body">
-                    <h5 class="card-title">thu</h5>
+                    <h5 class="card-title">THU</h5>
                     <div class="temp">
                       <strong> 17° </strong>
-                      <hr class="dot" />
+
                       3°
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-sign">
                       <i class="fa-regular fa-sun"></i>
                     </p>
                   </div>
@@ -173,12 +181,15 @@
           </div>
         </div>
       </div>
+
+      <br />
+
+      <a href="https://github.com/AnaSuzi/App" target="_blank" class="link">
+        open-source code
+      </a>
+      <span class="my-name">by Ana Caserman</span>
     </div>
-    <br />
-    <a href="https://github.com/AnaSuzi/App" target="_blank" class="link">
-      open-source code
-    </a>
-    <span class="my-name">by Ana Caserman</span>
+
     <script src="script.js"></script>
   </body>
 </html>
