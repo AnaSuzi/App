@@ -26,6 +26,37 @@ function search(event) {
 let form = document.querySelector("#form-text");
 form.addEventListener("submit", search);
 
+function displayForecast() {
+  let forecastElemet = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["TUE", "WED", "THU"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="card" style="width: 8rem; height: 8rem">
+          <div class="card-body">
+            <h5 class="card-title">${day}</h5>
+            <div class="temp">
+              <span class="high"> 11° </span>  
+
+              <span class="low">2°</span>
+            </div>
+
+            <p class="card-sign">
+              <i class="fa-solid fa-cloud-rain"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElemet.innerHTML = forecastHTML;
+}
+
 function showCity(cityName) {
   let apiKey = "dde4ce8f57f17e44f0e63ba4ad67d15c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
@@ -113,3 +144,4 @@ let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", showCelsius);
 let celsiusTemperature = null;
 showCity("Ljubljana");
+displayForecast();
