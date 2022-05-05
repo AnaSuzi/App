@@ -63,6 +63,11 @@ function showCity(cityName) {
   axios.get(apiUrl).then(showWeather);
 }
 
+function getForecast(coordinates) {
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiKey = "dde4ce8f57f17e44f0e63ba4ad67d15c";
+}
+
 function showWeather(response) {
   celsiusTemperature = response.data.main.temp;
   //temp
