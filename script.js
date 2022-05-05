@@ -26,31 +26,44 @@ function search(event) {
 let form = document.querySelector("#form-text");
 form.addEventListener("submit", search);
 
-function displayForecast() {
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
+
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElemet = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["TUE", "WED", "THU"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
       <div class="col-2">
         <div class="card" style="width: 8rem; height: 8rem">
           <div class="card-body">
-            <h5 class="card-title">${day}</h5>
+            <h5 class="card-title">${formatDay(forecastDay.dt)}</h5>
+            
+               
             <div class="temp">
-              <span class="high"> 11° </span>  
+              <span class="high"> ${Math.round(forecastDay.temp.max)}° </span>  
 
-              <span class="low">2°</span>
+              <span class="low">${Math.round(forecastDay.temp.min)}°</span>
             </div>
-
-            <p class="card-sign">
-              <i class="fa-solid fa-cloud-rain"></i>
-            </p>
+<img class="weather-icons" src="http://openweathermap.org/img/wn/${
+          forecastDay.weather[0].icon
+        }@2x.png" /> 
+          
           </div>
         </div>
       </div>
 `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -64,8 +77,9 @@ function showCity(cityName) {
 }
 
 function getForecast(coordinates) {
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   let apiKey = "dde4ce8f57f17e44f0e63ba4ad67d15c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lat}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function showWeather(response) {
@@ -110,6 +124,8 @@ function showWeather(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  getForecast(response.data.coord);
 }
 
 function showPosition(position) {
@@ -149,4 +165,3 @@ let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", showCelsius);
 let celsiusTemperature = null;
 showCity("Ljubljana");
-displayForecast();
