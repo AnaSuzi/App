@@ -146,22 +146,4 @@ function getCurrentPosition(event) {
 let button = document.querySelector("button");
 button.addEventListener("click", getCurrentPosition);
 
-function showFarenheit(event) {
-  event.preventDefault();
-  let farenTemp = (celsiusTemperature * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#temp-number");
-  temperatureElement.innerHTML = Math.round(farenTemp);
-}
-
-function showCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temp-number");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let farenheit = document.querySelector("#farenheit");
-farenheit.addEventListener("click", showFarenheit);
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", showCelsius);
-let celsiusTemperature = null;
 showCity("Ljubljana");
