@@ -84,13 +84,13 @@ input:focus {
 }
 
 .situation {
-  font-family: "Montserrat", sans-serif;
-  font-size: 13px;
-  font-weight: lighter;
   letter-spacing: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
 }
 
 .card-title {
@@ -175,7 +175,6 @@ button:hover {
 #wind-number,
 #humidity-number {
   color: #f3c5c5;
-  font-weight: bold;
 }
 
 .temp-now {
